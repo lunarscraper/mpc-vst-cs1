@@ -1,0 +1,10 @@
+{
+  "name": "CS-1",
+  "vendor": "lunarscraper",
+  "uid": "CS1l",
+  "version": 1000,
+  "so": "cs1.so",
+  "module": "module.json",
+  "layout": "layout.conf",
+  "_comment": "Instrument: twochannels' CS-1 (a CS-80-style synthesizer firmware for the M-VAVE FM-1), its own code in cs1/ (cs1_engine.c, one copy per instance). vst.json/module.json only feed mpc-vst-plugins' tools/gen_vst.py for params.h + the skin. The plugin is cs1_vst.cpp, built by this port's own build.sh."
+}

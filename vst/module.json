@@ -1,0 +1,803 @@
+{
+ "_comment": "Written by tools/gen_cs1.py (edit it there). Not a real Schwung module: chain_params lists the VST parameters of cs1_vst.cpp so mpc-vst-plugins' tools/gen_vst.py can generate params.h + the skin. The plugin keeps every value as the firmware's byte (0..max); start values come from sound 1.",
+ "chain_params": [
+  {
+   "key": "tone_i",
+   "name": "Tone I",
+   "min": 0,
+   "max": 57
+  },
+  {
+   "key": "tone_ii",
+   "name": "Tone II",
+   "min": 0,
+   "max": 57
+  },
+  {
+   "key": "i_feet",
+   "name": "I Feet",
+   "options": [
+    "16'",
+    "8'",
+    "5 1/3'",
+    "4'",
+    "2 2/3'",
+    "2'"
+   ]
+  },
+  {
+   "key": "i_wave",
+   "name": "I Wave",
+   "options": [
+    "SAW",
+    "PULSE",
+    "BOTH"
+   ]
+  },
+  {
+   "key": "i_pw",
+   "name": "I PW",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_pwm",
+   "name": "I PWM",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_pwm_spd",
+   "name": "I PWM Speed",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_noise",
+   "name": "I Noise",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_sine",
+   "name": "I Sine",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_vcf_lv",
+   "name": "I VCF Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_level",
+   "name": "I Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_hp_cut",
+   "name": "I HPF",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_hp_res",
+   "name": "I HPF Res",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_lp_cut",
+   "name": "I LPF",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_lp_res",
+   "name": "I LPF Res",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_f_il",
+   "name": "I VCF IL",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_f_al",
+   "name": "I VCF AL",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_f_a",
+   "name": "I VCF A",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_f_d",
+   "name": "I VCF D",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_f_r",
+   "name": "I VCF R",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_v_a",
+   "name": "I VCA A",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_v_d",
+   "name": "I VCA D",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_v_s",
+   "name": "I VCA S",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_v_r",
+   "name": "I VCA R",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_it_brill",
+   "name": "I Init Brill",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_it_level",
+   "name": "I Init Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_at_brill",
+   "name": "I After Brill",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "i_at_level",
+   "name": "I After Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_feet",
+   "name": "II Feet",
+   "options": [
+    "16'",
+    "8'",
+    "5 1/3'",
+    "4'",
+    "2 2/3'",
+    "2'"
+   ]
+  },
+  {
+   "key": "ii_wave",
+   "name": "II Wave",
+   "options": [
+    "SAW",
+    "PULSE",
+    "BOTH"
+   ]
+  },
+  {
+   "key": "ii_pw",
+   "name": "II PW",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_pwm",
+   "name": "II PWM",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_pwm_spd",
+   "name": "II PWM Speed",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_noise",
+   "name": "II Noise",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_sine",
+   "name": "II Sine",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_vcf_lv",
+   "name": "II VCF Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_level",
+   "name": "II Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_hp_cut",
+   "name": "II HPF",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_hp_res",
+   "name": "II HPF Res",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_lp_cut",
+   "name": "II LPF",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_lp_res",
+   "name": "II LPF Res",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_f_il",
+   "name": "II VCF IL",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_f_al",
+   "name": "II VCF AL",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_f_a",
+   "name": "II VCF A",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_f_d",
+   "name": "II VCF D",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_f_r",
+   "name": "II VCF R",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_v_a",
+   "name": "II VCA A",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_v_d",
+   "name": "II VCA D",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_v_s",
+   "name": "II VCA S",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_v_r",
+   "name": "II VCA R",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_it_brill",
+   "name": "II Init Brill",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_it_level",
+   "name": "II Init Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_at_brill",
+   "name": "II After Brill",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ii_at_level",
+   "name": "II After Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "lfo_spd",
+   "name": "Sub Speed",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "lfo_wave",
+   "name": "Sub Func",
+   "options": [
+    "SINE",
+    "TRI",
+    "SAW",
+    "SAW DN",
+    "SQUARE",
+    "NOISE"
+   ]
+  },
+  {
+   "key": "lfo_vco",
+   "name": "Sub VCO",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "lfo_vcf",
+   "name": "Sub VCF",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "lfo_vca",
+   "name": "Sub VCA",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "brill",
+   "name": "Brilliance",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "reso",
+   "name": "Resonance",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "volume",
+   "name": "Volume",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "detune",
+   "name": "Detune",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "porta",
+   "name": "Portamento",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "gliss",
+   "name": "Glissando",
+   "options": [
+    "OFF",
+    "ON"
+   ]
+  },
+  {
+   "key": "pbend",
+   "name": "Init P.Bend",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "at_spd",
+   "name": "After Speed",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "at_vco",
+   "name": "After VCO",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "at_vcf",
+   "name": "After VCF",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rm_mod",
+   "name": "Ring Mod",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rm_spd",
+   "name": "Ring Speed",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rm_depth",
+   "name": "Ring Depth",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rm_a",
+   "name": "Ring Attack",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rm_d",
+   "name": "Ring Decay",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "cho_mode",
+   "name": "Chorus Mode",
+   "options": [
+    "OFF",
+    "CHORUS",
+    "TREMOLO",
+    "FLANGE"
+   ]
+  },
+  {
+   "key": "cho_spd",
+   "name": "Chorus Speed",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "cho_depth",
+   "name": "Chorus Depth",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "aat_delay",
+   "name": "Auto AT Delay",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "aat_rise",
+   "name": "Auto AT Rise",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "aat_level",
+   "name": "Auto AT Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "aat_fall",
+   "name": "Auto AT Fall",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "dly_time",
+   "name": "Delay Time",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "dly_fb",
+   "name": "Delay Feedback",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "dly_mix",
+   "name": "Delay Mix",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "dly_ping",
+   "name": "Delay Ping",
+   "options": [
+    "OFF",
+    "ON"
+   ]
+  },
+  {
+   "key": "dly_damp",
+   "name": "Delay Damp",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rv_mix",
+   "name": "Reverb Mix",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rv_size",
+   "name": "Reverb Size",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rv_damp",
+   "name": "Reverb Damp",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rv_shim",
+   "name": "Shimmer",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rv_shift",
+   "name": "Shimmer Shift",
+   "min": 0,
+   "max": 24
+  },
+  {
+   "key": "mix",
+   "name": "Mix I/II",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "vintage",
+   "name": "Vintage",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "dly_sync",
+   "name": "Delay Sync",
+   "options": [
+    "FREE",
+    "1/16",
+    "1/8T",
+    "1/8",
+    "1/8D",
+    "1/4",
+    "1/4D",
+    "1/2"
+   ]
+  },
+  {
+   "key": "lfo_sync",
+   "name": "Sub Sync",
+   "options": [
+    "FREE",
+    "1/4",
+    "1/2",
+    "1 BAR",
+    "2 BAR",
+    "4 BAR"
+   ]
+  },
+  {
+   "key": "kb_bl",
+   "name": "Key Brill Low",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "kb_bh",
+   "name": "Key Brill High",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "kb_ll",
+   "name": "Key Level Low",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "kb_lh",
+   "name": "Key Level High",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "dly_tape",
+   "name": "Delay Tape",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ph_rate",
+   "name": "Phaser Rate",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ph_depth",
+   "name": "Phaser Depth",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ph_fb",
+   "name": "Phaser Feedback",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "ph_mix",
+   "name": "Phaser Mix",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "unison",
+   "name": "Unison",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "drive",
+   "name": "Drive",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "eq_lo",
+   "name": "EQ Low",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "eq_hi",
+   "name": "EQ High",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "drive_lv",
+   "name": "Drive Level",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "tune",
+   "name": "Tune",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "trans",
+   "name": "Transpose",
+   "min": 0,
+   "max": 48
+  },
+  {
+   "key": "rolloff",
+   "name": "Tone Rolloff",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "vel_curve",
+   "name": "Velocity Curve",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "sus2",
+   "name": "Sustain II",
+   "options": [
+    "OFF",
+    "ON"
+   ]
+  },
+  {
+   "key": "aat_on",
+   "name": "Auto AT",
+   "options": [
+    "OFF",
+    "ON"
+   ]
+  },
+  {
+   "key": "rnd_amount",
+   "name": "Random Amount",
+   "min": 0,
+   "max": 127
+  },
+  {
+   "key": "rnd_scope",
+   "name": "Random Scope",
+   "options": [
+    "ALL",
+    "TONES",
+    "GLOBAL",
+    "FX"
+   ]
+  },
+  {
+   "key": "rnd_cat",
+   "name": "Random Category",
+   "options": [
+    "ALL",
+    "PAD",
+    "STRINGS",
+    "BRASS",
+    "KEYS",
+    "BELLS",
+    "BASS",
+    "LEAD",
+    "FX",
+    "USER"
+   ]
+  },
+  {
+   "key": "roll",
+   "name": "Roll",
+   "access": "write"
+  },
+  {
+   "key": "undo",
+   "name": "Undo",
+   "access": "write"
+  },
+  {
+   "key": "slot",
+   "name": "Preset",
+   "min": 0,
+   "max": 100
+  },
+  {
+   "key": "load",
+   "name": "Load",
+   "access": "write"
+  },
+  {
+   "key": "save",
+   "name": "Save",
+   "access": "write"
+  }
+ ]
+}
